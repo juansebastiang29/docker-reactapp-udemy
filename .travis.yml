@@ -1,0 +1,11 @@
+sudo: required
+services:
+	- docker
+
+before_install:
+	- docker build -t jsgr/docker-react-app -f Dockerfile.dev .
+
+script:
+	- docker run -e CI=true jsgr/docker-react-app npm run test
+
+language: generic
