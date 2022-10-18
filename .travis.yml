@@ -7,5 +7,3 @@ before_install:
 
 script:
 	- docker run -e CI=true jsgr/docker-react-app npm run test
-
-language: generic
